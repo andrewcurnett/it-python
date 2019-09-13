@@ -23,11 +23,23 @@ guess = int(input("Type the number of the option you choose. "))
 
 if guess == 1:
     if the_number == 1:
-        print(f"You have chose rock. The computer has chosen rock.")
+        print("You have chose rock. The computer has chosen rock.")
+        print("You have tied, we go again!")
 
 if guess == 1:
+    if the_number == 2:
+        print("You have chosen rock, the computer has chosen paper.")
+        print("The computer has won this round, EZZZ CLEPS, better luck next round nerd, GR")
+
+if guess == 1:
+    if the_number == 3:
+        print("You have chosen rock, the computer has chosen scissors.")
+        print("You have won this round, computer got clepped, GR kid.")
+
+if guess == 2:
     if the_number == 1:
-        print("You have tied, let's go again.")
+        print("You have chosen paper, the computer has chosen Rock.")
+        print("You, my friend, have won this round. GR")
 
 if guess == 2:
     if the_number == 2:
@@ -38,6 +50,21 @@ if guess == 2:
     if the_number == 3:
         print("You have chosen paper, the computer has chosen Scissors")
         print("The computer has won this round.")
+
+if guess == 3:
+    if the_number == 1:
+        print("You have chosen scissors, the computer has chosen rock")
+        print("The computer has won this round, ez cleps gr m8")
+
+if guess == 3:
+    if the_number == 2:
+        print("You have chosen scissors, the computer has chosen paper")
+        print("You have won this round, but you still suck, GR m8")
+
+if guess == 3:
+    if the_number == 3:
+        print("You have chosen scissors, the computer has chosen scissors")
+        print("You have tied, and so it continues. gr")
 
 
 
