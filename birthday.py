@@ -4,7 +4,9 @@ from banner import banner
 banner("BIRTHDAY", "Andrew Curnett")
 
 # Process
-# 1. Find out birthday from user
+# 1. Find out birthday from user9+
+1.00
+
 # 2. Calculate how many days apart that is from now
 # 3. Print the birthday info, Days to go, Days ago, or Happy BDay!
 
@@ -28,20 +30,13 @@ def calculate_days_between_dates(date1, date2):
     dt = this_year - date2
     return dt.days
 
-
-
-
-
-
-
-
-
-
-
-
-
 def print_birthday_info(number_of_days):
-    print(number_of_days)
+    if number_of_days > 0:
+        print(f"Your birthday is in {number_of_days} days. Can't wait!")
+    elif number_of_days < 0:
+        print(f"Your birthday was {-number_of_days} days ago. Can't wait for the next one!")
+    else:
+        print("Today's your birthday! Happy Birthday!")
 
 
 
