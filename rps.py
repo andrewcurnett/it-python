@@ -48,66 +48,70 @@ while play_again.upper() == 'Y':
                 print("You have chose rock. The computer has chosen rock.")
                 print("You have tied, we go again!")
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 2:
                 print("You have chosen rock, the computer has chosen paper.")
                 print("The computer has won this round, EZZZ CLEPS, better luck next round nerd, GR")
                 computer_score = computer_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 3:
                 print("You have chosen rock, the computer has chosen scissors.")
                 print("You have won this round, computer got clepped, GR kid.")
                 player_score = player_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
 
-        if guess == 2:
+        elif guess == 2:
             if the_number == 1:
                 print("You have chosen paper, the computer has chosen Rock.")
                 print("You, my friend, have won this round. GR")
                 player_score = player_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 2:
                 print("You have chosen Paper, the computer has chosen paper.")
                 print("You have tied, let's go again.")
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 3:
                 print("You have chosen paper, the computer has chosen Scissors")
                 print("The computer has won this round.")
                 computer_score = computer_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
 
-        if guess == 3:
+        elif guess == 3:
             if the_number == 1:
                 print("You have chosen scissors, the computer has chosen rock")
                 print("The computer has won this round, ez cleps gr m8")
                 computer_score = computer_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 2:
                 print("You have chosen scissors, the computer has chosen paper")
                 print("You have won this round, but you still suck, GR m8")
                 player_score = player_score + 1
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
             elif the_number == 3:
                 print("You have chosen scissors, the computer has chosen scissors")
                 print("You have tied, and so it continues. gr")
                 print("")
-                input("Press the 'enter' key to move forward.")
+                input("Press the 'enter' key to continue.")
                 print("")
+        else:
+            print("You must choose a number between 1 and 3.")
+            input("Press the 'enter' key to continue")
+            continue
         print("")
         if computer_score > 1:
             print("=========SCORE=========")
@@ -134,7 +138,7 @@ while play_again.upper() == 'Y':
     if play_again.upper() == 'N':
         print("Thanks for playing! GG!")
         print("")
-        input("Press 'enter' to end.")
+        input("Press the 'enter' key to end the game.")
     print('\n'*100)
 
 
