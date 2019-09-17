@@ -13,6 +13,6 @@ def banner(title, author):
 if __name__ == "__main__":
     banner("BANNER", "Andrew Curnett")
     name = input("What is your name? ")
-    title = input("What is the quest? ")
+    title = input("What is the title? ")
     print("")
     banner(title, name)
