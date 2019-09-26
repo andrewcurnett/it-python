@@ -6,16 +6,18 @@ def main():
     run_event_loop()
 
 def run_event_loop():
-    filename = "default"
-    journal_data = journal.load(filename)#[]
+    filename = input("What file would you like to load? ")
+    journal_data = journal.load(filename)
 
     while True:
-        command = input("[L]ist entries, [A]dd an entry, E[x]it: ")
+        command = input("[L]ist entries, [A]dd an entry, [D]elete an entry, E[x]it: ")
 
         if command.upper() == "L":
             list_entries(journal_data)
         elif command.upper() == "A":
             add_entry(journal_data)
+        elif command.upper() == "D":
+            delete_entry(journal_data)
         elif command.upper() == "X":
             break
         else:
@@ -37,6 +39,12 @@ def add_entry(data):
     journal.add_entry(entry, data)
     #data.append(entry)
 
+def delete_entry(data):
+    for num, entry in enumerate(data):
+        print(f"{num+1} - {entry}")
+    print("")
+    entry_to_delete = int(input("Which entry would you like delete? "))
+    del data[entry_to_delete-1]
 
 
 
