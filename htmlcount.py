@@ -11,7 +11,6 @@ def load(filename):
     return data
 
 def html_tag_counter(text):
-    text = str(text)
     tag_count = 0
     previous_char = None
     for char in text:
@@ -19,18 +18,18 @@ def html_tag_counter(text):
             tag_count += 1
         previous_char = char
     return tag_count
+
 banner("HTML TAG COUNTER", "Andrew Curnett")
 again = 'Y'
 print("Welcome to the HTML tag counter")
 while again:
-
-
-
-
     filename = input("Please enter the name of an HTML file: ")
     data = load(filename)
+    count = 0
+    for line in data:
+        count += html_tag_counter(line)
     print("")
-    print(f"That html file has {html_tag_counter(data)} tags")
+    print(f"That html file has {count} tags")
 
     again = input("Would you like to count another HTML file?(Y/N) ")
     print('')
