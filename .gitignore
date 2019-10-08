@@ -1,2 +1,4 @@
 __pycache__/
 journals
+.ipynb_checkpoints/
+testing/
