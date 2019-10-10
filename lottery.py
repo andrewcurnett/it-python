@@ -11,7 +11,7 @@ print(f"BALANCE: ${balance}")
 
 while again:
 
-    cpu_guess = random.randint(1, 100)
+    cpu_guess = random.randint(1, 1)
     bet = int(input("How much do you want to bet? $"))
     if bet > balance:
         print("Sorry, not enough funds in balance, please try again.")
@@ -20,6 +20,8 @@ while again:
     p_guess = int(input("What number do you pick? "))
     if p_guess < 1 or p_guess > 100:
         print("Sorry, please choose a number between 1 and 100")
+        balance = balance + bet
+        continue
     elif p_guess == cpu_guess:
         balance = balance + bet * 10
         print(f"Congratulations! You chose {p_guess} and the computer also chose {cpu_guess}!, you win {bet * 10}!")
@@ -29,6 +31,11 @@ while again:
         print("")
         print(f"BALANCE: ${balance}")
         print("")
+    if balance > 999999:
+        print("You have reached reached maximum funds! You win! Thanks for playing!")
+        input("Click the 'enter' key to end.")
+        print('\n' * 100)
+        break
     if balance == 0:
         print("Sorry, no more funds.")
         input("Click the 'enter' key to end.")
@@ -41,7 +48,7 @@ while again:
     if again.upper() == 'N':
         print("Thanks for playing!")
         input("Click the 'enter' key to end.")
-
         break
+
 
 
